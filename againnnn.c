@@ -6,7 +6,7 @@ struct patient
 	double weight;
 	double height;
 };
-double calculate_BMI(const struct patient*);
+double calculate_BMI(struct patient*);
 void printheight(const struct patient*);
 int main()
 {
@@ -18,7 +18,7 @@ int main()
 	printf("This patient's BMI is %f\n",calculate_BMI(&patient1));
 	return 0;
 }
-double calculate_BMI(const struct patient *patient_id)
+double calculate_BMI(struct patient *patient_id)
 {
 	return patient_id->weight/((patient_id->height)*(patient_id->height));
 }
